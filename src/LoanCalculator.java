@@ -7,6 +7,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
+import loan.Loan;
 
 public class LoanCalculator extends Application {
     private TextField tfAnnualInterestRate = new TextField();
@@ -60,7 +61,7 @@ public class LoanCalculator extends Application {
         double loanAmount =
                 Double.parseDouble(tfLoanAmount.getText());
 
-        Loan loan = new Loan(interest, year, loanAmount);
+    Loan loan = new Loan(interest, year, loanAmount);
 
         tfMonthlyPayment.setText(String.format("$%.2f",
                 loan.getMonthlyPayment()));
